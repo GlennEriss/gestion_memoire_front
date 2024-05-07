@@ -1,5 +1,16 @@
 {
-    "Index": {
-        "title": "Hello world!"
+    "Login": {
+        "title": "Accédez aux mémoires des anciens et enrichissez votre parcours"
+    },
+    "LoginForm": {
+        "labelEmail": "Email",
+        "passwordForget": "Mot de passe oublié?",
+        "buttonLogin": "Se connecter",
+        "labelPassword": "Mot de passe",
+        "placeholderPassword": "**********"
+    },
+    "MenuNavigation": {
+        "description": "Dashboard",
+        "overview": "APERÇU"
     }
 }

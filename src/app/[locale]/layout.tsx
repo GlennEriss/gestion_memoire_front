@@ -3,6 +3,8 @@ import '../globals.css'
 import { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
+import clsx from 'clsx'
+import Head from 'next/head'
 
 const font = Lexend({ subsets: ['latin'] })
 
@@ -21,7 +23,10 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale}>
-      <body className={font.className}>
+      <Head>
+        <meta charSet="UTF-8" /> 
+      </Head>
+      <body className={clsx('overscroll-none',font.className)}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
