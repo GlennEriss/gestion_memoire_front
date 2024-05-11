@@ -12,5 +12,43 @@
     "MenuNavigation": {
         "description": "Dashboard",
         "overview": "APERÇU"
+    },
+    "MenuItem": {
+        "theses": "Mémoires"
+    },
+    "Notifications": {
+        "notifications": "Notifications",
+        "seeAll": "Voir tout"
+    },
+    "UserMenuItem": {
+        "profile": "Profile"
+    },
+    "Logout": {
+        "logout": "Déconnexion"
+    },
+    "ThemeSwitcher": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Default"
+    },
+    "SidebarLeft": {
+        "overview": "APERÇU",
+        "library": "Bibliothèque"
+    },
+    "TemplateDashboard": {
+        "theses": "Mémoires"
+    },
+    "BreadCrumbDashboard": {
+        "theses":"Mémoires",
+        "dashboard": "Tableau de bord"
+    },
+    "AddLink": {
+        "addTheses": "Ajouter un mémoire"
+    },
+    "SearchBar": {
+        "placeholder": "Rechercher un mémoire"
+    },
+    "Filters": {
+        "filters": "Filtres"
     }
 }

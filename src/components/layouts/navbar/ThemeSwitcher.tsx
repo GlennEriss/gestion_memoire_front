@@ -1,38 +1,41 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { BsSunFill } from 'react-icons/bs'
-import { FaMoon } from 'react-icons/fa'
+import * as React from 'react'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
+
+import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu'
+import { useTranslations } from 'next-intl'
 
 export function ThemeSwitcher() {
-  const [darkMode, setDarkMode] = useState(false)
-  const useDarkMode = useCallback(() => {
-    if(darkMode){
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    }else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
-  }, [darkMode])
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useDarkMode()
-    const theme = localStorage.getItem('theme')
-    if(theme === 'dark') {setDarkMode(true)}
-  }, [darkMode, useDarkMode])
-  
+  const { setTheme } = useTheme()
+  const t = useTranslations('ThemeSwitcher')
   return (
-    <div 
-      className="bg-gray-500 relative w-16 h-8 flex items-center dark:bg-gray-900 bg-app-color-2 rounded-full p-1 cursor-pointer"
-      onClick={() => setDarkMode(!darkMode)}
-    >
-      <FaMoon className='text-white' size={18}/>
-      <div 
-        className="absolute bg-white dark:bg-medium w-6 h-6 rounded-full shadow-md transform transition-transform duration-300"
-        style={darkMode?{left:'2px'}:{right:'2px'}}
-      > </div>
-      <BsSunFill className='ml-auto text-yellow-500' size={18}/>
-    </div>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button className="mr-2 relative shadow-md bg-white hover:bg-white text-black inline-flex items-center p-3 text-sm font-medium text-center rounded-lg hover:text-app-color-blue focus:outline-none focus:ring-0">
+          <Sun className="h-[1.4rem] w-[1.4rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme('light')}>
+          {t('light')}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('dark')}>
+          {t('dark')}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme('system')}>
+          {t('system')}
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

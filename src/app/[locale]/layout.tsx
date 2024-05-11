@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import clsx from 'clsx'
 import Head from 'next/head'
+import { ThemeProvider } from '@/providers/ThemeProviders'
 
 const font = Lexend({ subsets: ['latin'] })
 
@@ -24,12 +25,19 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        <meta charSet="UTF-8" /> 
+        <meta charSet="UTF-8" />
       </Head>
-      <body className={clsx('overscroll-none',font.className)}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+      <body className={clsx('overscroll-none', font.className)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

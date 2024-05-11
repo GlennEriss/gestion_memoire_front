@@ -16,7 +16,7 @@ export const USER_MENU = [
   {
     title: 'profile',
     link: '',
-    icon: <BiUserCircle size={25}/>
+    icon: <BiUserCircle size={30}/>
   },
   {
     title: 'logout',

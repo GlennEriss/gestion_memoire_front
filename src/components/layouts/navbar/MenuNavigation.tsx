@@ -18,7 +18,7 @@ export default function MenuNavigation() {
       </SheetTrigger>
       <SheetContent side='left' className='p-0'>
         <SheetHeader className='flex-row items-center justify-start'>
-          <Link href={pathnames['/dashboard/theses'].fr}>
+          <Link href={pathnames['/dashboard/theses'].en} >
             <LogoImg />
           </Link>
           <SheetTitle>

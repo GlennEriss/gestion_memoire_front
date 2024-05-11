@@ -1,5 +1,5 @@
 import Navbar from '@/components/layouts/navbar/Navbar'
-//import SidebarLeft from '@/components/layouts/SidebarLeft'
+import SidebarLeft from '@/components/layouts/SidebarLeft'
 import { ReactNode } from 'react'
 
 export default function layout({
@@ -10,7 +10,7 @@ export default function layout({
   return (
     <div className='min-h-screen lg:grid lg:grid-cols-5'>
       <div className='hidden lg:block lg:col-span-1'>
-        {/* <SidebarLeft /> */}
+        <SidebarLeft />
       </div>
       <div className='lg:col-span-4'>
         <Navbar />

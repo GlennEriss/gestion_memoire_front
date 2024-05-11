@@ -1,16 +1,17 @@
 import { createSharedPathnamesNavigation } from 'next-intl/navigation'
 
-export const locales = ['fr'] as const
+export const locales = ['fr', 'en'] as const
 export const localePrefix = 'never'
 export const defaultLocale = 'fr'
-export const pathnames = {
+export const pathnames: any = {
   '/': '/',
   '/login': {
     fr: '/connexion',
     en: '/login'
   },
   '/dashboard/theses': {
-    fr: '/tableau-de-bord/liste-des-memoires'
+    fr: '/tableau-de-bord/liste-des-memoires',
+    en: '/dashboard/theses'
   }
 }
 

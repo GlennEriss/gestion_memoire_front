@@ -20,6 +20,7 @@ const config = {
     extend: {
       colors: {
         'app-color-green': '#237774',
+        'app-color-blue': '#5C85F1',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
