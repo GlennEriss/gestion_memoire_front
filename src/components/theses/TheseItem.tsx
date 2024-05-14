@@ -12,7 +12,7 @@ export default function TheseItem() {
           sizes="100vw"
           alt=""
           width={300}
-          height={80}
+          height={350}
           className="object-cover"
           priority
           unoptimized

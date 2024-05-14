@@ -4,7 +4,7 @@ import Filters from './Filters'
 
 export default function FiltersTheses() {
   return (
-    <div className='flex'>
+    <div className='flex items-center md:justify-between'>
       <SearchBar/>
       <Filters/>
     </div>

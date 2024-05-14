@@ -27,7 +27,7 @@ export default function BreadCrumbDashboard({ title, breadCrumpList, subtitle }:
             )
           }
           <BreadcrumbItem>
-            <BreadcrumbPage> {subtitle} </BreadcrumbPage>
+            <BreadcrumbPage> {t(subtitle)} </BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>

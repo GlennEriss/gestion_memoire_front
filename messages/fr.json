@@ -14,7 +14,8 @@
         "overview": "APERÇU"
     },
     "MenuItem": {
-        "theses": "Mémoires"
+        "theses": "Mémoires",
+        "register": "Inscription"
     },
     "Notifications": {
         "notifications": "Notifications",
@@ -40,7 +41,11 @@
     },
     "BreadCrumbDashboard": {
         "theses":"Mémoires",
-        "dashboard": "Tableau de bord"
+        "dashboard": "Tableau de bord",
+        "list": "Liste",
+        "add": "Ajouter",
+        "register": "Inscription",
+        "addStudent": "Ajout d'étudiants"
     },
     "AddLink": {
         "addTheses": "Ajouter un mémoire"
@@ -50,5 +55,37 @@
     },
     "Filters": {
         "filters": "Filtres"
+    },
+    "RegisterBody": {
+        "student": "Etudiants",
+        "administrator": "Membres administratifs"
+    },
+    "AddStudent": {
+        "title": "Ajouter étudiant"
+    },
+    "AddStudentExcel": {
+        "title": "Ajouter via excel",
+        "titleDialog": "Ajout d'étudiants à partir d'un fichier excel",
+        "description": "Le fichier excel doit-être composé de 7 colonnes dans cet ordre:\nNom\nPrénom\nEmail\nDate de naissance\nMatricule\nNiveau\nFilière\nNom de la classe"
+    },
+    "SearchBarStudent": {
+        "placeholder": "Rechercher un étudiant"
+    },
+    "ListStudentBody": {
+        "picture": "Photo",
+        "firstname": "Nom",
+        "lastname": "Prénom",
+        "email": "Email",
+        "birthday": "Date de naissance",
+        "matricule": "Matricule",
+        "class": "Classe",
+        "actions": "Actions"
+    },
+    "EditStudent": {
+        "title": "Modifier l'étudiant"
+    },
+    "SelectionAddStudent": {
+        "titleLink": "Ajouter des étudiants via un lien docx",
+        "titleExcel": "Ajouter des étudiants via un fichier docx"
     }
 }

@@ -11,7 +11,7 @@ export default function MenuItem({item}: MenuItemProps) {
   const t = useTranslations('MenuItem')
   const local = useLocale()
   return (
-    <Link className='flex items-center space-x-3 px-4  text-black' href={item.link}>
+    <Link className='flex items-center space-x-3 px-4  text-black' href={item.link[local]}>
       <span className={`${formatUrl(usePathname()) === item.link[local]? 'text-app-color-blue p-2 rounded-xl' : ''}`}> {item.icon} </span>
       <span className={`${formatUrl(usePathname()) === item.link[local]? 'text-app-color-blue' : ''}`}> {t(item.title)} </span>
     </Link>
