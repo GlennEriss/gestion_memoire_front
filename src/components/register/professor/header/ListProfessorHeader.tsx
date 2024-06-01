@@ -11,7 +11,7 @@ export default function ListProfessorHeader() {
   return (
     <div className="space-y-5">
       <div className='grid grid-cols-2 gap-4 md:flex md:items-center'>
-        <AddLector title={t('addProfessor')} />
+        <AddLector title={t('addProfessor')} type='Professor' />
         <AddLectorExcel pathname={pathnames['/dashboard/register/professor/add'][locale]} />
       </div>
       <FilterProfessorSection/>
