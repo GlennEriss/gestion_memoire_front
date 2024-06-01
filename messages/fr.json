@@ -1,0 +1,153 @@
+{
+    "Login": {
+        "title": "Accédez aux mémoires des anciens et enrichissez votre parcours"
+    },
+    "LoginForm": {
+        "labelEmail": "Email",
+        "passwordForget": "Mot de passe oublié?",
+        "buttonLogin": "Se connecter",
+        "labelPassword": "Mot de passe",
+        "placeholderPassword": "**********"
+    },
+    "MenuNavigation": {
+        "description": "Dashboard",
+        "overview": "APERÇU"
+    },
+    "MenuItem": {
+        "theses": "Mémoires",
+        "register": "Inscription"
+    },
+    "Notifications": {
+        "notifications": "Notifications",
+        "seeAll": "Voir tout"
+    },
+    "UserMenuItem": {
+        "profile": "Profile"
+    },
+    "Logout": {
+        "logout": "Déconnexion"
+    },
+    "ThemeSwitcher": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Default"
+    },
+    "SidebarLeft": {
+        "overview": "APERÇU",
+        "library": "Bibliothèque"
+    },
+    "TemplateDashboard": {
+        "theses": "Mémoires"
+    },
+    "BreadCrumbDashboard": {
+        "theses": "Mémoires",
+        "dashboard": "Tableau de bord",
+        "list": "Liste",
+        "add": "Ajouter",
+        "register": "Inscription",
+        "addStudent": "Ajout d'étudiants"
+    },
+    "AddLink": {
+        "addTheses": "Ajouter un mémoire"
+    },
+    "SearchBar": {
+        "placeholder": "Rechercher un mémoire"
+    },
+    "Filters": {
+        "filters": "Filtres"
+    },
+    "RegisterBody": {
+        "students": "Etudiants",
+        "professors": "Professeurs"
+    },
+    "AddStudent": {
+        "title": "Ajouter étudiant"
+    },
+    "AddStudentExcel": {
+        "title": "Ajouter via excel",
+        "titleDialog": "Ajout d'étudiants à partir d'un fichier excel",
+        "description": "Le fichier excel doit-être composé de 7 colonnes dans cet ordre:\nNom\nPrénom\nEmail\nDate de naissance\nMatricule\nNiveau\nFilière\nNom de la classe"
+    },
+    "SearchBarStudent": {
+        "placeholder": "Rechercher un étudiant"
+    },
+    "ListStudentBody": {
+        "picture": "Photo",
+        "firstname": "Nom",
+        "lastname": "Prénom",
+        "email": "Email",
+        "birthday": "Date de naissance",
+        "matricule": "Matricule",
+        "class": "Classe",
+        "actions": "Actions"
+    },
+    "EditStudent": {
+        "title": "Modifier l'étudiant"
+    },
+    "SelectionAddStudent": {
+        "titleLink": "Ajouter des étudiants via un lien docx",
+        "titleExcel": "Ajouter des étudiants via un fichier docx"
+    },
+    "RegisterByExcel": {
+        "title": "Inscription"
+    },
+    "RegisterStudent": {
+        "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance, sexe et matricule.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
+    },
+    "ListStudentHeader": {
+        "addStudent": "Ajout d'étudiants"
+    },
+    "ListProfessorHeader": {
+        "addProfessor": "Ajout de professeurs"
+    },
+    "SearchBarProfessor": {
+        "placeholder": "Rechercher un professeur"
+    },
+    "FilterProfessor": {
+        "filters": "Filtres"
+    },
+    "ListProfessorBody": {
+        "picture": "Photo",
+        "firstname": "Nom",
+        "lastname": "Prénom",
+        "email": "Email",
+        "birthday": "Date de naissance",
+        "fonction": "Fonction",
+        "actions": "Actions"
+    },
+    "RegisterProfessor": {
+        "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance et fonction.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
+    },
+    "StudentForm": {
+        "firstname":"Nom",
+        "lastname":"Prénom",
+        "email":"Email",
+        "birthday":"Date de naissance",
+        "sexe": "Genre",
+        "sexePlaceholder": "Sélectionner un genre",
+        "man": "Homme",
+        "woman": "Femme",
+        "matricule": "Matricule",
+        "save": "Inscrire",
+        "saveAndContinue": "Incrire et saisir de nouveau"
+    },
+    "AddLector": {
+        "titleAddStudent": "Inscrire un étudiant",
+        "descriptionAddStudent": "Inscrire à la palteforme de mémoires",
+        "titleAddProfessor": "Inscrire un professeur",
+        "descriptionAddProfessor": "Inscrire à la palteforme de mémoires"
+    },
+    "ProfessorForm": {
+        "firstname":"Nom",
+        "lastname":"Prénom",
+        "email":"Email",
+        "birthday":"Date de naissance",
+        "sexe": "Genre",
+        "sexePlaceholder": "Sélectionner un genre",
+        "man": "Homme",
+        "woman": "Femme",
+        "fonction": "Fonction",
+        "save": "Inscrire",
+        "saveAndContinue": "Incrire et saisir de nouveau"
+    }
+}
