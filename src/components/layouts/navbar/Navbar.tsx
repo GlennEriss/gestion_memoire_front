@@ -26,7 +26,7 @@ export default function Navbar() {
   const isScrolling = scrollPosition > 0
 
   return (
-    <nav className={`sticky top-0 flex py-5 border border-transparent ${isScrolling ? 'bg-white shadow border-b-gray-300' : 'bg-transparent'}`}>
+    <nav className={`sticky top-0 z-20 flex py-5 border border-transparent ${isScrolling ? 'bg-white shadow border-b-gray-300' : 'bg-white'}`}>
       <div className='flex items-center'>
         <div className='lg:hidden '>
           <MenuNavigation />

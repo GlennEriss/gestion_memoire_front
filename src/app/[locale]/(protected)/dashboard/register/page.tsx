@@ -1,4 +1,4 @@
-import RegisterBody from '@/components/register/student/RegisterBody'
+import RegisterBody from '@/components/register/RegisterBody'
 import BreadCrumbDashboard from '@/components/template-dashboard/BreadCrumbDashboard'
 import { pathnames } from '@/navigation'
 import React from 'react'

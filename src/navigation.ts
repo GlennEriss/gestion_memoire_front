@@ -25,13 +25,9 @@ export const pathnames: any = {
     fr: '/tableau-de-bord/inscription/etudiant/ajouter',
     en: '/dashboard/register/student/add'
   },
-  '/dashboard/register/student/add/by-link': {
-    fr: '/tableau-de-bord/inscription/etudiant/ajouter-par-lien',
-    en: '/dashboard/register/student/add/by-link'
-  },
-  '/dashboard/register/student/add/by-file':{
-    fr: '/tableau-de-bord/inscription/etudiant/ajouter-par-fichier',
-    en: '/dashboard/register/student/add/by-file'
+  '/dashboard/register/professor/add': {
+    fr: '/tableau-de-bord/inscription/professeur/ajouter',
+    en: '/dashboard/register/professor/add'
   }
 }
 

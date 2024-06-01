@@ -1,7 +1,8 @@
-import RegisterStudent from '@/components/register/student/RegisterStudent'
+import RegisterProfessor from '@/components/register/professor/RegisterProfessor'
 import BreadCrumbDashboard from '@/components/template-dashboard/BreadCrumbDashboard'
 import { pathnames } from '@/navigation'
 import React from 'react'
+
 const breadCrumpList = [
   {
     title: 'dashboard',
@@ -13,7 +14,7 @@ const breadCrumpList = [
   },
   {
     title: 'add',
-    link: pathnames['/dashboard/register/student/add']
+    link: pathnames['/dashboard/register/professor/add']
   },
 ]
 export default function page() {
@@ -22,7 +23,7 @@ export default function page() {
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <BreadCrumbDashboard title='register' subtitle='addStudent' breadCrumpList={breadCrumpList} />
       </div>
-      <RegisterStudent/>
+      <RegisterProfessor/>
     </div>
   )
 }
