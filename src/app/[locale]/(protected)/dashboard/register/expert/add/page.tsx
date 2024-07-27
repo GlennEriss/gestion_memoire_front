@@ -1,4 +1,4 @@
-import RegisterProfessor from '@/components/register/professor/RegisterProfessor'
+import RegisterExpert from '@/components/register/expert/RegisterExpert'
 import BreadCrumbDashboard from '@/components/template-dashboard/BreadCrumbDashboard'
 import { pathnames } from '@/navigation'
 import React from 'react'
@@ -23,7 +23,7 @@ export default function page() {
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <BreadCrumbDashboard title='register' subtitle='addStudent' breadCrumpList={breadCrumpList} />
       </div>
-      <RegisterProfessor/>
+      <RegisterExpert/>
     </div>
   )
 }

@@ -1,25 +1,30 @@
 'use client'
 import React from 'react'
-import { MENU } from './navbar/menu'
-import MenuItem from './navbar/MenuItem'
-import LogoImg from '../logo/LogoImg'
+import { MENU } from '../navbar/menu'
+import MenuItem from '../navbar/MenuItem'
+import LogoImg from '../../logo/LogoImg'
 import { useLocale, useTranslations } from 'next-intl'
 import { Link, pathnames } from '@/navigation'
+import { Input } from '../../ui/input'
+import AcademicYear from './AcademicYear'
 
 export default function SidebarLeft() {
   const t = useTranslations('SidebarLeft')
-  const local:string = useLocale()
+  const local: string = useLocale()
   return (
     <div className='h-full space-y-3 border-r-2 border-r-gray-200'>
       <Link className='flex items-center' href={pathnames['/dashboard/theses'][local]}>
-        <LogoImg/>
+        <LogoImg />
         <span className='font-bold'> {t('library')} </span>
       </Link>
+      <div className="flex justify-center">
+        <AcademicYear />
+      </div>
       <p className='pl-6 text-sm text-gray-500'> {t('overview')} </p>
       <div>
         {
-          MENU.map((item, key) => 
-            <MenuItem item={item} key={key}/>
+          MENU.map((item, key) =>
+            <MenuItem item={item} key={key} />
           )
         }
       </div>

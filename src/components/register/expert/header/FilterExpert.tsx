@@ -4,8 +4,8 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 import { AiFillFilter } from 'react-icons/ai'
 
-export default function FilterProfessor() {
-  const t = useTranslations('FilterProfessor')
+export default function FilterExpert() {
+  const t = useTranslations('FilterExpert')
   return (
     <div className=''>
       <Popover>

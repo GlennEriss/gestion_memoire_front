@@ -31,6 +31,13 @@ export type Student = Lector & {
     matricule: string
 }
 
-export type Professor = Lector & {
+export type Expert = Lector & {
     fonction: string
+}
+
+export type AcademicYear = {
+    id?: number,
+    yearStart: string,
+    yearEnd: string,
+    isActived: boolean
 }

@@ -22,11 +22,11 @@ export const pathnames: any = {
     en: '/dashboard/register'
   },
   '/dashboard/register/student/add': {
-    fr: '/tableau-de-bord/inscription/etudiant/ajouter',
+    fr: '/tableau-de-bord/inscription/lecteur/ajouter',
     en: '/dashboard/register/student/add'
   },
   '/dashboard/register/professor/add': {
-    fr: '/tableau-de-bord/inscription/professeur/ajouter',
+    fr: '/tableau-de-bord/inscription/expert/ajouter',
     en: '/dashboard/register/professor/add'
   }
 }

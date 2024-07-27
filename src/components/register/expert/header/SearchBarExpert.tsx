@@ -3,8 +3,8 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 
-export default function SearchBarProfessor() {
-  const t = useTranslations('SearchBarProfessor')
+export default function SearchBarExpert() {
+  const t = useTranslations('SearchBarExpert')
   return (
     <div className="items-center grid grid-cols-2">
       <input

@@ -1,10 +1,10 @@
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { useTranslations } from 'next-intl'
 import React from 'react'
-import ProfessorItem from './ProfessorItem'
+import ExpertItem from './ExpertItem'
 
-export default function ListProfessorBody() {
-  const t = useTranslations('ListProfessorBody')
+export default function ListExpertBody() {
+  const t = useTranslations('ListExpertBody')
   const headers = [
     'picture',
     'firstname',
@@ -29,7 +29,7 @@ export default function ListProfessorBody() {
           </tr>
         </thead>
         <tbody>
-          <ProfessorItem />
+          <ExpertItem />
         </tbody>
       </table>
         

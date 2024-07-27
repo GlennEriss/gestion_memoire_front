@@ -4,7 +4,7 @@ import { Tabs, TabsList, TabsTrigger } from '../ui/tabs'
 import { useTranslations } from 'next-intl'
 import { TabsContent } from '@radix-ui/react-tabs'
 import ListStudentHeader from './student/ListStudentHeader'
-import ListProfessorSection from './professor/ListProfessorSection'
+import ListExpertSection from './expert/ListExpertSection'
 
 export default function RegisterBody() {
   const t = useTranslations('RegisterBody')
@@ -22,7 +22,7 @@ export default function RegisterBody() {
         <ListStudentHeader/>
       </TabsContent>
       <TabsContent value='professor' className='py-4'>
-        <ListProfessorSection/>
+        <ListExpertSection/>
       </TabsContent>
     </Tabs>
   )

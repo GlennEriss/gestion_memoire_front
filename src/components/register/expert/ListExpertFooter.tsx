@@ -1,7 +1,7 @@
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationLink, PaginationEllipsis, PaginationNext } from '@/components/ui/pagination'
 import React from 'react'
 
-export default function ListProfessorFooter() {
+export default function ListExpertFooter() {
   return (
     <Pagination className='flex justify-end'> 
       <PaginationContent>

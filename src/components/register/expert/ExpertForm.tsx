@@ -1,37 +1,38 @@
-import { addLectorAction } from '@/actions/lector.action'
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { PhoneInput } from '@/components/ui/phone-number'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { formStudentSchema, FormStudentSchema } from '@/schemas'
+import { formExpertSchema, FormExpertSchema } from '@/schemas'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
 import React, { useTransition } from 'react'
 import { useForm } from 'react-hook-form'
+import 'react-phone-number-input/style.css'
 
-export default function StudentForm() {
-  const t = useTranslations('StudentForm')
+export default function ExpertForm() {
+  const t = useTranslations('ExpertForm')
   const [isPending, startTransition] = useTransition()
-  const form = useForm<FormStudentSchema>({
-    resolver: zodResolver(formStudentSchema),
+  const form = useForm<FormExpertSchema>({
+    resolver: zodResolver(formExpertSchema),
     defaultValues: {
       firstname: '',
       lastname: '',
       email: '',
       birthday: '',
       sexe: 'M',
-      adresse: '',
-      phone: ''
-    },
+      fonction: '',
+      address: '',
+      phoneNumber: ''
+    }
   })
-
-  function onSubmit(values: FormStudentSchema) {
-    startTransition(() => {
-      addLectorAction(values)
+  function onSubmit(values: FormExpertSchema) {
+    startTransition(() =>{
+      console.log(values)
     })
   }
   return (
-    <div>
+    <div className='overflow-y-auto h-[600px]'>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
           <FormField
@@ -112,34 +113,47 @@ export default function StudentForm() {
           />
           <FormField
             control={form.control}
-            name='adresse'
+            name='fonction'
             render={({ field }) => (
               <FormItem>
-                <FormLabel htmlFor='adresse'>
-                  {t('adresse')}
+                <FormLabel htmlFor='fonction'>
+                  {t('fonction')}
                 </FormLabel>
                 <FormControl>
-                  <Input id='adresse' type='text' {...field} />
+                  <Input id='fonction' type='text' {...field} />
                 </FormControl>
               </FormItem>
             )}
           />
           <FormField
             control={form.control}
-            name='phone'
+            name='address'
             render={({ field }) => (
               <FormItem>
-                <FormLabel htmlFor='phone'>
-                  {t('phone')}
+                <FormLabel htmlFor='address'>
+                  {t('address')}
                 </FormLabel>
                 <FormControl>
-                  <Input id='phone' type='text' {...field} />
+                  <Input id='address' type='text' {...field} />
                 </FormControl>
               </FormItem>
             )}
           />
-          <div className="flex justify-between md:justify-end md:space-x-2
-          ">
+          <FormField
+            control={form.control}
+            name='phoneNumber'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor='phoneNumber'>
+                  {t('phoneNumber')}
+                </FormLabel>
+                <FormControl>
+                  <PhoneInput defaultCountry='SN' id='phoneNumber' {...field} />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <div className="flex justify-between md:justify-end md:space-x-2">
             <Button type='submit'>
               {
                 isPending ? (
@@ -151,7 +165,7 @@ export default function StudentForm() {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  t('save')
+                  <span>{t('save')}</span>
                 )
               }
 
@@ -167,7 +181,7 @@ export default function StudentForm() {
                     <span className="sr-only">Loading...</span>
                   </div>
                 ) : (
-                  t('saveAndContinue')
+                  <span>{t('saveAndContinue')}</span>
                 )
               }
             </Button>

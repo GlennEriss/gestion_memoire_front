@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
-import EditProfessor from './EditProfessor'
-import DetailsProfessor from './DetailsProfessor'
-import DeleteProfessor from './DeleteProfessor'
+import EditExpert from './EditExpert'
+import DetailsExpert from './DetailsExpert'
+import DeleteExpert from './DeleteExpert'
 
-export default function ProfessorItem() {
+export default function ExpertItem() {
   return (
     <tr className='border'>
       <td className='p-3'>
@@ -23,11 +23,11 @@ export default function ProfessorItem() {
       <td className='p-3'> Doe </td>
       <td className='p-3'> johndoe@email.com</td>
       <td className='p-3'> 10/10/1999</td>
-      <td className='p-3'> Professeur de Java</td>
+      <td className='p-3'> Expert de Java</td>
       <td className="p-3 flex items-center justify-center mt-5">
-        <EditProfessor/>
-        <DetailsProfessor/>
-        <DeleteProfessor/> 
+        <EditExpert/>
+        <DetailsExpert/>
+        <DeleteExpert/> 
       </td>
     </tr>
   )

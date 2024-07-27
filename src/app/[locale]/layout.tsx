@@ -6,6 +6,9 @@ import { notFound } from 'next/navigation'
 import clsx from 'clsx'
 import Head from 'next/head'
 import { ThemeProvider } from '@/providers/ThemeProviders'
+import ReactQueryProvider from '@/providers/ReactQueryProvider'
+import { Toaster } from '@/components/ui/toaster'
+import YearProvider from '@/providers/YearProvider'
 
 const font = Lexend({ subsets: ['latin'] })
 
@@ -35,7 +38,12 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
+            <ReactQueryProvider>
+              <Toaster />
+              <YearProvider>
+                {children}
+              </YearProvider>
+            </ReactQueryProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

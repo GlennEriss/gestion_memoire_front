@@ -1,5 +1,5 @@
 import Navbar from '@/components/layouts/navbar/Navbar'
-import SidebarLeft from '@/components/layouts/SidebarLeft'
+import SidebarLeft from '@/components/layouts/sidebar/SidebarLeft'
 import { ReactNode } from 'react'
 
 export default function layout({
@@ -14,7 +14,6 @@ export default function layout({
       </div>
       <div className='lg:col-span-4'>
         <Navbar />
-        {/* <DetailsPage/> */}
         <div className='p-5 bg-app-color-gray dark:bg-gray-500'>
           {children}
         </div>

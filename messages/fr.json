@@ -45,7 +45,7 @@
         "list": "Liste",
         "add": "Ajouter",
         "register": "Inscription",
-        "addStudent": "Ajout d'étudiants"
+        "addStudent": "Ajout de lecteurs"
     },
     "AddLink": {
         "addTheses": "Ajouter un mémoire"
@@ -57,19 +57,19 @@
         "filters": "Filtres"
     },
     "RegisterBody": {
-        "students": "Etudiants",
-        "professors": "Professeurs"
+        "students": "Lecteurs",
+        "professors": "Experts"
     },
     "AddStudent": {
-        "title": "Ajouter étudiant"
+        "title": "Ajouter un lecteur"
     },
     "AddStudentExcel": {
         "title": "Ajouter via excel",
-        "titleDialog": "Ajout d'étudiants à partir d'un fichier excel",
+        "titleDialog": "Ajout de lecteurs à partir d'un fichier excel",
         "description": "Le fichier excel doit-être composé de 7 colonnes dans cet ordre:\nNom\nPrénom\nEmail\nDate de naissance\nMatricule\nNiveau\nFilière\nNom de la classe"
     },
     "SearchBarStudent": {
-        "placeholder": "Rechercher un étudiant"
+        "placeholder": "Rechercher un lecteur"
     },
     "ListStudentBody": {
         "picture": "Photo",
@@ -77,16 +77,16 @@
         "lastname": "Prénom",
         "email": "Email",
         "birthday": "Date de naissance",
-        "matricule": "Matricule",
+        "adresse": "Adresse",
         "class": "Classe",
         "actions": "Actions"
     },
     "EditStudent": {
-        "title": "Modifier l'étudiant"
+        "title": "Modifier un lecteur"
     },
     "SelectionAddStudent": {
-        "titleLink": "Ajouter des étudiants via un lien docx",
-        "titleExcel": "Ajouter des étudiants via un fichier docx"
+        "titleLink": "Ajouter des lecteurs via un lien docx",
+        "titleExcel": "Ajouter des lecteurs via un fichier docx"
     },
     "RegisterByExcel": {
         "title": "Inscription"
@@ -95,18 +95,18 @@
         "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance, sexe et matricule.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
     },
     "ListStudentHeader": {
-        "addStudent": "Ajout d'étudiants"
+        "addStudent": "Ajout de lecteurs"
     },
-    "ListProfessorHeader": {
-        "addProfessor": "Ajout de professeurs"
+    "ListExpertHeader": {
+        "addExpert": "Ajout d'experts"
     },
-    "SearchBarProfessor": {
-        "placeholder": "Rechercher un professeur"
+    "SearchBarExpert": {
+        "placeholder": "Rechercher un expert"
     },
-    "FilterProfessor": {
+    "FilterExpert": {
         "filters": "Filtres"
     },
-    "ListProfessorBody": {
+    "ListExpertBody": {
         "picture": "Photo",
         "firstname": "Nom",
         "lastname": "Prénom",
@@ -115,7 +115,7 @@
         "fonction": "Fonction",
         "actions": "Actions"
     },
-    "RegisterProfessor": {
+    "RegisterExpert": {
         "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance et fonction.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
     },
     "StudentForm": {
@@ -127,17 +127,18 @@
         "sexePlaceholder": "Sélectionner un genre",
         "man": "Homme",
         "woman": "Femme",
-        "matricule": "Matricule",
+        "phone": "Téléphone",
+        "adresse": "Adresse",
         "save": "Inscrire",
         "saveAndContinue": "Incrire et saisir de nouveau"
     },
     "AddLector": {
-        "titleAddStudent": "Inscrire un étudiant",
+        "titleAddStudent": "Inscrire un lecteur",
         "descriptionAddStudent": "Inscrire à la palteforme de mémoires",
-        "titleAddProfessor": "Inscrire un professeur",
-        "descriptionAddProfessor": "Inscrire à la palteforme de mémoires"
+        "titleAddExpert": "Inscrire un expert",
+        "descriptionAddExpert": "Inscrire à la palteforme de mémoires"
     },
-    "ProfessorForm": {
+    "ExpertForm": {
         "firstname":"Nom",
         "lastname":"Prénom",
         "email":"Email",
@@ -149,5 +150,18 @@
         "fonction": "Fonction",
         "save": "Inscrire",
         "saveAndContinue": "Incrire et saisir de nouveau"
+    },
+    "AcademicYearForm": {
+        "labelYear": "Ajouter une année académique",
+        "placeholder": "2024-2025",
+        "buttonAddYear": "Ajouter",
+        "academicYearSchema": {
+            "requiredYear": "Veillez saisir une année",
+            "invalidFormat": "Format YYYY-YYYY",
+            "invalidYearRange": "Un an d'écart entre les années"
+        }
+    },
+    "AcademicYearList": {
+        "title": "Liste des années académiques"
     }
 }

@@ -7,6 +7,7 @@ import { MENU } from './menu'
 import LogoImg from '@/components/logo/LogoImg'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { Link, pathnames } from '@/navigation'
+import AcademicYear from '../sidebar/AcademicYear'
 export default function MenuNavigation() {
   const t = useTranslations('MenuNavigation')
   return (
@@ -26,6 +27,9 @@ export default function MenuNavigation() {
           </SheetTitle>
         </SheetHeader>
         <div className='py-3 px-5'>
+          <div className="flex justify-center pb-5">
+            <AcademicYear />
+          </div>
           <SheetDescription>
             {t('overview')}
           </SheetDescription>

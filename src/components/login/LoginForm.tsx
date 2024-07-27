@@ -1,5 +1,5 @@
 'use client'
-import { login } from '@/actions/login'
+import { login } from '@/actions/login.action'
 import { formLoginSchema, FormLoginSchema } from '@/schemas'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'

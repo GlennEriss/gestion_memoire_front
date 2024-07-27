@@ -3,12 +3,12 @@ import React from 'react'
 import { Button } from '../ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
 import StudentForm from './student/StudentForm'
-import ProfessorForm from './professor/ProfessorForm'
+import ExpertForm from './expert/ExpertForm'
 import { useTranslations } from 'next-intl'
 
 type AddLectorProps = {
   title: string
-  type: 'Student' | 'Professor'
+  type: 'Student' | 'Expert'
 }
 export default function AddLector({ title, type }: AddLectorProps) {
   const t = useTranslations('AddLector')
@@ -24,17 +24,17 @@ export default function AddLector({ title, type }: AddLectorProps) {
       <DialogContent className='overflow-auto'>
         <DialogHeader>
           <DialogTitle>
-            {t(type==='Student'? 'titleAddStudent': 'titleAddProfessor')}
+            {t(type==='Student'? 'titleAddStudent': 'titleAddExpert')}
           </DialogTitle>
           <DialogDescription>
-            {t(type==='Student'? 'descriptionAddStudent': 'descriptionAddProfessor')}
+            {t(type==='Student'? 'descriptionAddStudent': 'descriptionAddExpert')}
           </DialogDescription>
         </DialogHeader>
         {
           type === 'Student'?(
             <StudentForm />
           ): (
-            <ProfessorForm />
+            <ExpertForm />
           )
         }
       </DialogContent>

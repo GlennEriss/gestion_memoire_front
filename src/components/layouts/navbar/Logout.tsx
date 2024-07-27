@@ -1,4 +1,4 @@
-import { logout } from '@/actions/logout'
+import { logout } from '@/actions/logout.action'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 type LogoutProps = {
