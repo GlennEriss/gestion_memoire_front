@@ -1,9 +1,15 @@
+'use client'
 import React from 'react'
 import { Button } from '../ui/button'
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '../ui/card'
 import Image from 'next/image'
+import { useRouter } from '@/navigation'
 
 export default function TheseItem() {
+  const router = useRouter()
+  const handleDetails = () => {
+    router.push('/dashboard/theses/1')
+  }
   return (
     <Card>
       <CardHeader className='p-0 m-0'>
@@ -20,7 +26,7 @@ export default function TheseItem() {
       </CardHeader>
       <CardContent className='flex flex-col gap-3 p-2'>
         <CardTitle>
-                    Ma préparation de classe
+          Ma préparation de classe
         </CardTitle>
         <CardDescription className='flex flex-col'>
           <span>Promotion 2024</span>
@@ -28,16 +34,19 @@ export default function TheseItem() {
         </CardDescription>
         <div className='grid grid-cols-2 gap-2'>
           <Button variant='outline' className='hover:bg-green-500 hover:text-white text-gray-500'>
-                        Publier
+            Publier
           </Button>
           <Button variant='outline' className='hover:bg-app-color-blue hover:text-white text-gray-500'>
-                        Modifier
+            Modifier
           </Button>
-          <Button variant='outline' className='hover:bg-orange-500 hover:text-white text-gray-500'>
-                        Détails
+          <Button
+            onClick={handleDetails}
+            variant='outline'
+            className='hover:bg-orange-500 hover:text-white text-gray-500'>
+            Détails
           </Button>
           <Button variant='outline' className='hover:bg-red-500 hover:text-white text-gray-500'>
-                        Supprimer
+            Supprimer
           </Button>
         </div>
       </CardContent>

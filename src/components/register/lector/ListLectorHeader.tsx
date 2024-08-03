@@ -1,11 +1,10 @@
 import React from 'react'
 import FiltersSection from './FiltersSection'
-import ListStudentBody from './ListStudentBody'
+import ListStudentBody from './ListLectorBody'
 import AddLector from '../AddLector'
 import AddLectorExcel from '../AddLectorExcel'
 import { useLocale, useTranslations } from 'next-intl'
-import { pathnames } from '@/navigation'
-import ListStudentPagination from './ListStudentPagination'
+import ListStudentPagination from './ListLectorPagination'
 
 export default function ListStudentHeader() {
   const t = useTranslations('ListStudentHeader')
@@ -14,7 +13,7 @@ export default function ListStudentHeader() {
     <div className='space-y-5'>
       <div className='grid grid-cols-2 gap-4 md:flex md:items-center'>
         <AddLector title={t('addStudent')} type='Student' />
-        <AddLectorExcel pathname={pathnames['/dashboard/register/student/add'][locale]} />
+        <AddLectorExcel pathname={'/dashboard/users/student/add'} />
       </div>
       <FiltersSection/>
       <ListStudentBody/>

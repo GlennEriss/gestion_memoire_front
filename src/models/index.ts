@@ -6,17 +6,19 @@ type User = {
 type Person = {
     nom: string,
     prenom: string,
-    birthdate: Date,
-    sexe: 'M'|'F'
+    dateNaissance: string|Date,
+    sexe?: 'M'|'F',
+    adresse: string,
+    telephone: string
 }
 export type ExpertModel = User & Person & {
     fonction: string,
-    adresse: string,
-    telephone: string,
 }
 
+export type Utilisateur =  User & Person
 export type YearModel = {
     id?: number,
     anneeDebut: string,
     anneeFin: string
 }
+

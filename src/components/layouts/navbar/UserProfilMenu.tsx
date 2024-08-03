@@ -6,6 +6,7 @@ import { USER_MENU } from './menu'
 import Logout from './Logout'
 import UserMenuItem from './UserMenuItem'
 import { Separator } from '@/components/ui/separator'
+import DeconnexionButton from './DeconnexionButton'
 
 export default function UserProfilMenu() {
   return (
@@ -44,6 +45,7 @@ export default function UserProfilMenu() {
                 )
             )
           }
+          <DeconnexionButton/>
         </div>
       </PopoverContent>
     </Popover>

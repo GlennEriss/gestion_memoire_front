@@ -16,7 +16,7 @@ export default function AcademicYear() {
                 {year}
             </Button>
         </PopoverTrigger>
-        <PopoverContent className='bg-white border rounded-md shadow pb-5'>
+        <PopoverContent className='bg-white border rounded-md z-20 shadow pb-5'>
             <AcademicYearForm/>
             <AcademicYearList/>
         </PopoverContent>

@@ -9,7 +9,10 @@ export type Pathnames = {
     '/dashboard/theses': LocalizedPath;
 };
 export type Role = 'LIBRARIAN'|'LECTOR'
-
+export type Creation = {
+    createdAt: Date,
+    updatedAt: Date
+}
 export type UserDetails = {
     id?: number,
     uid?: string,
@@ -17,12 +20,15 @@ export type UserDetails = {
     lastname: string,
     password? : string,
     email: string, 
-    role: Role
+    role: Role,
+    adress: string,
+    phoneNumber: string,
+    searchableName?: string
 }
 
 export type Sexe = 'M'| 'F'
-export type Lector = UserDetails &  {
-    birthday: Date,
+export type Lector = UserDetails & Creation & {
+    birthday: string|Date,
     sexe: string,
     photoURL?: string
 }

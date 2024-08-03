@@ -3,17 +3,15 @@ import React from 'react'
 import { MENU } from '../navbar/menu'
 import MenuItem from '../navbar/MenuItem'
 import LogoImg from '../../logo/LogoImg'
-import { useLocale, useTranslations } from 'next-intl'
-import { Link, pathnames } from '@/navigation'
-import { Input } from '../../ui/input'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/navigation'
 import AcademicYear from './AcademicYear'
 
 export default function SidebarLeft() {
   const t = useTranslations('SidebarLeft')
-  const local: string = useLocale()
   return (
     <div className='h-full space-y-3 border-r-2 border-r-gray-200'>
-      <Link className='flex items-center' href={pathnames['/dashboard/theses'][local]}>
+      <Link className='flex items-center' href={'/dashboard/theses'}>
         <LogoImg />
         <span className='font-bold'> {t('library')} </span>
       </Link>

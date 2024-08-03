@@ -17,8 +17,8 @@ export const addExpertAction = async (values: FormExpertSchema) => {
         fonction: validatedFields.data.fonction,
         adresse: validatedFields.data.address,
         telephone: validatedFields.data.phoneNumber,
-        birthdate: new Date(validatedFields.data.birthday),
-        sexe: validatedFields.data.sexe
+        dateNaissance: new Date(validatedFields.data.birthday),
+        //sexe: validatedFields.data.sexe
     }
     const response = await fetch(`${process.env.HOST_URL}/api/academic-year`, {
         method: 'POST',

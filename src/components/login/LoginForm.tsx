@@ -10,24 +10,43 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import Link from 'next/link'
+import { useToast } from '../ui/use-toast'
+import { useRouter } from '@/navigation'
 
 export default function LoginForm() {
   const t = useTranslations('LoginForm')
   const [isPending, startTransition] = useTransition()
   const [passwordVisible, setPasswordVisible] = useState(false)
+  const router = useRouter()
+  const { toast } = useToast()
   const form = useForm<FormLoginSchema>({
     resolver: zodResolver(formLoginSchema),
     defaultValues: {
-      email: '',
-      password: ''
+      email: 'ritchi@outlook.fr',
+      password: 'passer123'
     },
   })
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible)
   }
   async function onSubmit(data: FormLoginSchema) {
-    startTransition(() => {
-      login(data)
+    startTransition(async () => {
+      const result = await login(data)
+      if (result.success) {
+        toast({
+          title: "Bienvenue sur votre dashboard",
+          description: "Nous sommes ravis de vous revoir",
+          variant: "success"
+        })
+        router.push('/dashboard/theses')
+      } else {
+        toast({
+          title: "Erreur de connexion",
+          description: "Email ou password incorrect",
+          variant: "destructive"
+        })
+        console.error(result.message);
+      }
     })
   }
   return (

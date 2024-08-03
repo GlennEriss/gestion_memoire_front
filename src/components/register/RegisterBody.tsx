@@ -3,7 +3,7 @@ import React from 'react'
 import { Tabs, TabsList, TabsTrigger } from '../ui/tabs'
 import { useTranslations } from 'next-intl'
 import { TabsContent } from '@radix-ui/react-tabs'
-import ListStudentHeader from './student/ListStudentHeader'
+import ListStudentHeader from './lector/ListLectorHeader'
 import ListExpertSection from './expert/ListExpertSection'
 
 export default function RegisterBody() {

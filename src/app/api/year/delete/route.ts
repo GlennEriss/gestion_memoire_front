@@ -4,9 +4,6 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
     try {
         const { id } = await req.json();
-
-        console.log('ID to delete:', id); 
-        console.log(`${process.env.NEXT_PUBLIC_API_URL}/${apiRoutes.annee.delete}/${id}`)
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${apiRoutes.annee.delete}/${id}`, {
             method: 'DELETE',
             headers: {

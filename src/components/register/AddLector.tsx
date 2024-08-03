@@ -2,7 +2,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
-import StudentForm from './student/StudentForm'
+import StudentForm from './lector/LectorForm'
 import ExpertForm from './expert/ExpertForm'
 import { useTranslations } from 'next-intl'
 

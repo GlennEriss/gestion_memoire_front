@@ -37,7 +37,7 @@ export default function DeleteAcademicYear({
             queryClient.invalidateQueries({ queryKey: ['academic-years'] })
             toast({
                 title: "Suppression d'une année académique",
-                description: "Année académique supprimer avec succès!",
+                description: "Année académique supprimée avec succès!",
                 variant: "success"
             })
         }

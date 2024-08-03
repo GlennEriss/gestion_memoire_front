@@ -1,17 +1,16 @@
 import BreadCrumbDashboard from '@/components/template-dashboard/BreadCrumbDashboard'
 import TheseAddForm from '@/components/theses/TheseAddForm'
-import { pathnames } from '@/navigation'
 import React from 'react'
 
 export default function page() {
   const breadCrumpList = [
     {
       title: 'dashboard',
-      link: pathnames['/dashboard/theses']
+      link: '/dashboard/theses'
     },
     {
       title: 'theses',
-      link: pathnames['/dashboard/theses']
+      link: '/dashboard/theses'
     }
   ]
   return (

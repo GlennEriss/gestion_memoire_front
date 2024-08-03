@@ -1,6 +1,6 @@
 import React from 'react'
-import SearchBarStudent from './SearchBarStudent'
-import FiltersStudent from './FiltersStudent'
+import SearchBarStudent from './SearchBarLector'
+import FiltersStudent from './FiltersLector'
 
 export default function FiltersSection() {
   return (

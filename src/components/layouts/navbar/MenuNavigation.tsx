@@ -6,7 +6,7 @@ import MenuItem from './MenuItem'
 import { MENU } from './menu'
 import LogoImg from '@/components/logo/LogoImg'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
-import { Link, pathnames } from '@/navigation'
+import { Link } from '@/navigation'
 import AcademicYear from '../sidebar/AcademicYear'
 export default function MenuNavigation() {
   const t = useTranslations('MenuNavigation')
@@ -19,7 +19,7 @@ export default function MenuNavigation() {
       </SheetTrigger>
       <SheetContent side='left' className='p-0'>
         <SheetHeader className='flex-row items-center justify-start'>
-          <Link href={pathnames['/dashboard/theses'].en} >
+          <Link href={'/dashboard/theses'} >
             <LogoImg />
           </Link>
           <SheetTitle>

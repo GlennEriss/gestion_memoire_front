@@ -17,19 +17,31 @@ export const pathnames: any = {
     fr: '/tableau-de-bord/liste-des-memoires/ajouter',
     en: '/dashboard/theses/add'
   },
-  '/dashboard/register': {
-    fr: '/tableau-de-bord/inscription',
-    en: '/dashboard/register'
+  '/dashboard/users': {
+    fr: '/tableau-de-bord/utilisateurs',
+    en: '/dashboard/users'
   },
-  '/dashboard/register/student/add': {
+  '/dashboard/users/student/add': {
     fr: '/tableau-de-bord/inscription/lecteur/ajouter',
-    en: '/dashboard/register/student/add'
+    en: '/dashboard/users/student/add'
   },
-  '/dashboard/register/professor/add': {
-    fr: '/tableau-de-bord/inscription/expert/ajouter',
-    en: '/dashboard/register/professor/add'
+  '/dashboard/users/professor/add': {
+    fr: '/tableau-de-bord/utilisateurs/expert/ajouter',
+    en: '/dashboard/users/professor/add'
+  },
+  '/dashboard/users/lector/[id]': {
+    fr: '/tableau-de-bord/utilisateurs/lecteur/[id]',
+    en: '/dashboard/users/lector/[id]'
+  },
+  '/dashboard/users/expert/[id]': {
+    fr: '/tableau-de-bord/utilisateurs/expert/[id]',
+    en: '/dashboard/users/expert/[id]'
   }
 }
+export const accessible_routes = [''];
 
+export const protected_routes = [
+  'dashboard',
+]
 export const { Link, redirect, usePathname, useRouter } =
   createSharedPathnamesNavigation({ locales, localePrefix })

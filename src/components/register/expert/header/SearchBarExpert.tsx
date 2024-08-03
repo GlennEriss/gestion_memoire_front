@@ -1,13 +1,16 @@
 'use client'
+import { useExpertContext } from '@/providers/ExpertProvider'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 
 export default function SearchBarExpert() {
   const t = useTranslations('SearchBarExpert')
+  const {setSearchExpert} = useExpertContext()
   return (
     <div className="items-center grid grid-cols-2">
       <input
+        onChange={e => setSearchExpert(e.target.value)}
         type="search"
         name="q"
         placeholder={t('placeholder')}

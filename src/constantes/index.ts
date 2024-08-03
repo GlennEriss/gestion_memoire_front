@@ -11,7 +11,20 @@ export const apiRoutes = {
         delete: 'deletAnneeAcademique',
     },
     lector: {
-        get: 'Lector/getAllLecteurrs',
-        add: 'Lecteur/addLecteur'
+        get: 'getAllLecteurs',
+        add: 'addLecteur',
+        delete: 'deleteLecteur',
+        getById: 'getLecteur',
+        update: 'updateLecteur'
+    },
+    expert: {
+        add: 'addExpert',
+        get: 'getAllExperts',
+        delete: 'deleteExpert',
+        getById: 'getExpert',
+        update: 'updateExpert'
+    },
+    auth: {
+        login: 'api/Auth/login'
     }
 }

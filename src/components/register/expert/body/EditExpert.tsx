@@ -1,13 +1,31 @@
 import React from 'react'
-import { Link } from '@/navigation'
 import { BiEdit } from 'react-icons/bi'
 import { useTranslations } from 'next-intl'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import ExpertForm from '../ExpertForm'
+import { Button } from '@/components/ui/button'
+import { Expert } from '@/types'
 
-export default function EditExpert() {
+type EditExpertProps = {
+  expert: Partial<Expert>
+}
+export default function EditExpert({expert}: EditExpertProps) {
   const t = useTranslations('EditExpert')
   return (
-    <Link href='' title={t('title')}>
-      <BiEdit size={30} />
-    </Link>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button variant='ghost' className='text-md hover:bg-transparent text-center text-white p-2 rounded-md'>
+          <BiEdit size={30} color='black' />
+        </Button>
+      </DialogTrigger>
+      <DialogContent className='overflow-auto'>
+        <DialogHeader>
+          <DialogTitle>
+            Modification d'un expert
+          </DialogTitle>
+        </DialogHeader>
+        <ExpertForm expert={expert} />
+      </DialogContent>
+    </Dialog>
   )
 }

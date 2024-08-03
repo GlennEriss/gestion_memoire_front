@@ -1,30 +1,41 @@
 'use server'
 
-import { pathnames } from '@/navigation'
-/* import { signIn } from '@/auth'
-import { DEFAULT_LOGIN_REDIRECT } from '@/routes/routes'
-import { AuthError } from 'next-auth' */
 import { formLoginSchema, FormLoginSchema } from '@/schemas'
-import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 
 export const login = async (values: FormLoginSchema) => {
   const validatedFields = formLoginSchema.safeParse(values)
-  if(!validatedFields.success){
-    return {success:false, error:true, message:'invalidFields'}
+  if (!validatedFields.success) {
+    return { success: false, error: true, message: 'invalidFields' }
   }
-  redirect(pathnames['/dashboard/theses'].fr)
-  /* const {email, password } = validatedFields.data
+  const { email, password } = validatedFields.data
   try {
-    await signIn('credentials', {email, password, redirectTo: DEFAULT_LOGIN_REDIRECT})
-  } catch (error) {
-    if(error instanceof AuthError){
-      switch (error.type) {
-      case 'CredentialsSignin':
-        return {error:true, success:false, message:'invalidCredential'}
-      default:
-        return {error:true, success:false, message:'internalError'}
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST_URL}/api/auth/login`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password })
       }
+    )
+    
+    if (!response.ok) {
+      // Handle server errors
+      const errorData = await response.json();
+      console.error('Server error:', errorData);
+      throw new Error('Login failed');
     }
-    throw error
-  }  */
+
+    const { accessToken } = await response.json()
+    
+    // Store the token in cookies
+    cookies().set('token', accessToken, { path: '/' });
+
+    return { success: true }
+
+  } catch (error) {
+    console.error('Error during login:', error);
+    return { success: false, error: true, message: 'loginFailed' }
+  }
 }

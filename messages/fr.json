@@ -15,7 +15,7 @@
     },
     "MenuItem": {
         "theses": "Mémoires",
-        "register": "Inscription"
+        "users": "Utilisateurs"
     },
     "Notifications": {
         "notifications": "Notifications",
@@ -44,8 +44,12 @@
         "dashboard": "Tableau de bord",
         "list": "Liste",
         "add": "Ajouter",
-        "register": "Inscription",
-        "addStudent": "Ajout de lecteurs"
+        "users": "Utilisateurs",
+        "addStudent": "Ajout de lecteurs",
+        "detailsLector": "Détails de lecteur",
+        "lector": "Lecteur",
+        "detailsExpert": "Détails de l'expert",
+        "expert": "expert"
     },
     "AddLink": {
         "addTheses": "Ajouter un mémoire"
@@ -79,7 +83,8 @@
         "birthday": "Date de naissance",
         "adresse": "Adresse",
         "class": "Classe",
-        "actions": "Actions"
+        "actions": "Actions",
+        "phoneNumber": "Téléphone"
     },
     "EditStudent": {
         "title": "Modifier un lecteur"
@@ -89,7 +94,7 @@
         "titleExcel": "Ajouter des lecteurs via un fichier docx"
     },
     "RegisterByExcel": {
-        "title": "Inscription"
+        "title": "Utilisateurs"
     },
     "RegisterStudent": {
         "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance, sexe et matricule.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
@@ -113,7 +118,8 @@
         "email": "Email",
         "birthday": "Date de naissance",
         "fonction": "Fonction",
-        "actions": "Actions"
+        "actions": "Actions",
+        "phoneNumber": "Téléphone"
     },
     "RegisterExpert": {
         "required": "Les colonnes doivent-être respectivement dans l'ordre nom, prénom, email, date de naissance et fonction.\nLa première ligne sera réservée pour les entêtes de chaque colonne"
@@ -149,7 +155,9 @@
         "woman": "Femme",
         "fonction": "Fonction",
         "save": "Inscrire",
-        "saveAndContinue": "Incrire et saisir de nouveau"
+        "saveAndContinue": "Incrire et saisir de nouveau",
+        "adress": "Adresse",
+        "phoneNumber": "Téléphone"
     },
     "AcademicYearForm": {
         "labelYear": "Ajouter une année académique",
